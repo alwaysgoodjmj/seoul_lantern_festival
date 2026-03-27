@@ -1,10 +1,7 @@
-* {
-    font-family: 'NotoSansKR_B';
-}
-
 body {
     font-size: 16px;
     color: #000;
+    font-family: 'NotoSansKR_SB';
     background-color: #fff;
     overflow-y: scroll;
 }

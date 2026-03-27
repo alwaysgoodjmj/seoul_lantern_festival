@@ -17,9 +17,9 @@
 <body>
   <!-- header -->
   <header id="header">
+    <div class="header-inner">
       <!-- logo -->
       <h1 class="logo"><a href="#"><span class="hidden">서울빛초롱축제 로고</span></a></h1>
-
       <!-- gnb -->
       <nav class="gnb main-menu">
           <ul class="main-depth">
@@ -31,7 +31,7 @@
                 <li><a href="#">축제 둘러보기</a></li>
                 <li><a href="#">협업 파트너</a></li>
               </ul>
-            </li> 
+            </li>
             <li>
               <a href="#">2025 광화문 마켓</a>
               <ul class="depth2">
@@ -41,7 +41,7 @@
                 <li><a href="#">협업 파트너</a></li>
                 <li><a href="#">체험 프로그램&이벤트</a></li>
               </ul>
-            </li> 
+            </li>
             <li>
               <a href="#">FAQ</a>
               <ul class="depth2">
@@ -58,15 +58,13 @@
                 <li><a href="#">역대 사진</a></li>
                 <li><a href="#">수상</a></li>
               </ul>
-            </li> 
+            </li>
           </ul>
-
           <!-- icon-box -->
           <div class="icon-box">
             <!-- languages -->
             <div class="languages">
               <button class="btn-lan"></button>
-
               <ul class="lan_list">
                 <li class="default">국문</li>
                 <li>영문</li>
@@ -74,13 +72,18 @@
             </div>
             <!-- search-container -->
             <div class="search-container">
-              <button class="btn-search"></button>
+              <button class="btn-search" aria-label="찾기 버튼"></button>
               <div class="search-box"></div>
             </div>
-            <!-- ham-menu -->
-            <div class="ham-menu"></div>
+            <!-- btn-ham -->
+            <a href="#" class="btn-ham" aria-label="단축 메뉴">
+              <span class="line"></span>
+              <span class="line"></span>
+              <span class="line_l"></span>
+            </a>
           </div>
       </nav>
+    </div>
   </header>
 
   <!-- main -->

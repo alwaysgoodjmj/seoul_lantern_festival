@@ -2,6 +2,7 @@
 
 @import url(./reset.css);
 @import url(./base.css);
+@import url(./font.css);
 @import url(./slider.css);
 
 /* color */
@@ -28,4 +29,8 @@
     margin: -1px;
     overflow: hidden;
     clip: rect(0, 0, 0, 0);
+}
+
+button {
+    background: 0 0 / 100% 100% no-repeat;
 }
