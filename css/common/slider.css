@@ -1,1 +1,12 @@
 @charset "utf-8";
+
+:root {
+    /* 도트 width / height */
+    --dot-width: 10px;
+    --dot-height: 10px;
+}
+
+/* 슬라이드 도트 */
+.swiper-horizontal>.swiper-pagination-bullets { left: auto; width: auto; height: 100%; right: 30px; display: flex; flex-direction: column; justify-content: center; gap: 40px; }
+.swiper-pagination-bullet { position: relative; display: block; width: var(--dot-width); height: var(--dot-height); background: #fff; }
+.swiper-pagination-bullet.swiper-pagination-bullet-active::after { content: ''; position: absolute; top: -5px; left: -5px; width: calc(var(--dot-width) * 2); height: calc(var(--dot-height) * 2); border-radius: 50%; border: 2px solid var(--white); }

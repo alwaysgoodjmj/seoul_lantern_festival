@@ -1,8 +1,8 @@
 @charset "utf-8";
 
 /**** header ****/
-#header { position: fixed; top: 0; left: 0; display: flex; justify-content: center; align-items: center; width: 100%; height: 85px; z-index: 20; color: var(--white); font-size: 1.1em; font-family: 'NotoSansKR_B'; }
-#header:hover { background: #EDE9DD; color: var(--header-clr); transition: 0.3s; }
+#header { position: fixed; top: 0; left: 0; display: flex; justify-content: center; align-items: center; width: 100%; height: 85px; z-index: 20; color: var(--white); font-size: 1.1em; font-family: 'NotoSansKR_B'; border-bottom: 1px solid transparent; }
+#header:hover { border-color: #DDDACF; background: #EDE9DD; color: var(--header-clr); transition: 0.3s; }
 #header:hover .logo { background-image: url(../images/logo_c.png); }
 #header:hover .icon-box button { filter: none; }
 #header:hover .btn-ham span { background-color: var(--header-clr); } 
@@ -13,17 +13,24 @@
 #header .logo { width: 354px; height: 29px; background: url(../images/logo_w.png) 0 0 / 100% 100% no-repeat; }
 
 /* gnb */
-.gnb { display: flex; align-items: center; gap: 60px; }
+.gnb { position: relative; display: flex; align-items: center; gap: 60px; height: 100%; }
+
 .gnb .main-depth { display: flex; gap: 60px; }
-.gnb .depth2 { display: none; }
+
+.gnb .depth2 { display: none; position: absolute; top: 100%; left: 0; }
+.gnb li.ON .depth2 { display: block; }
+
+/* .gnb .depth2::before { position: absolute; top: 0; left: 50%; transform: translateX(-50%); content: ''; width: 100vw; background: #EDE9DD; } */
+.gnb .depth2 li { display: inline-block; }
+.gnb .depth2 li:not(:last-of-type) { margin-right: 60px; }
 
 /* icon-box */
 .icon-box { display: flex; gap: 35px; }
-.icon-box button { filter: brightness(0) saturate(100%) invert(92%) sepia(75%) saturate(2%) hue-rotate(108deg) brightness(110%) contrast(101%); }
+.icon-box button { filter: brightness(0) saturate(100%) invert(92%) sepia(75%) saturate(2%) hue-rotate(108deg) brightness(110%) contrast(101%); vertical-align: middle; }
 
 .btn-lan { width: 21px; height: 21px; background-image: url(../images/ico_lan.png); }
 .btn-search { width: 20px; height: 19px; background-image: url(../images/ico_search.png); }
-.btn-ham { display: flex; flex-direction: column; align-items: flex-end; gap: 7px; }
+.btn-ham { display: flex; flex-direction: column; align-items: flex-end; justify-content: flex-end; gap: 7px; }
 .btn-ham span { width: 30px; height: 2px; background-color: var(--white); }
 .btn-ham span.line_l { width: 40px; }
 
@@ -31,11 +38,16 @@
 .languages .lan_list { display: none; position: absolute; }
 
 /**** main ****/
+main > section:not(.slide-container) { width: 70%; }
+
 /* slide */
 .swiper-slide { width: 100%; height: 100%; }
 .swiper-slide img { width: 100%; height: 100%; object-fit: cover; }
 .main-slide .swiper-slide img { transform: scale(1); transition: transform .3s ease-out; }
 .main-slide .swiper-slide.swiper-slide-active img { animation: scaleDown 2s ease-out forwards; }
+
+/* 축제 정보 */
+.info-container { width: 100vw; height: 500px; object-fit: contain; background: #31231E url(../images/mainbg_01.png) 0 0 / 100% 100% no-repeat; }
 
 /**** 애니메이션 ****/
 @keyframes scaleDown {
