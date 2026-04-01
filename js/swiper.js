@@ -1,28 +1,34 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const mainSwiper = new Swiper('.main-slide', {
+    const swiper = new Swiper('.slide-container', {
       loop: true,
       autoplay: {
-          delay: 4000,
+          delay: 5000,
           disableOnInteraction: false,
       },
       pagination: {
-        el: '.main-slide .swiper-pagination',
+        el: '.swiper-pagination',
         clickable: true,
-      }
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      allowTouchMove: false,
     });
 
-    const contentSwiper = new Swiper('.content-slide', {
-      slidesPerView: 3,
-      spaceBetween: 20,
-      centeredSlides: true,
-      navigation: {
-        nextEl: '.content-slide .swiper-button-next',
-        prevEl: '.content-slide .swiper-button-prev',
-      },
-      breakpoints: {
-        768: { slidesPerView: 3, spaceBetween: 30 },
-        1024: { slidesPerView: 4, spaceBetween: 40 }
-    }
+    const btnPlay = document.querySelector('.btn-play');
+    const btnStop = document.querySelector('.btn-pause');
+    
+    btnStop.addEventListener('click', () => {
+      swiper.autoplay.stop();
+      btnStop.style.display = 'none';
+      btnPlay.style.display = 'block';
+    });
+
+    btnPlay.addEventListener('click', () => {
+      swiper.autoplay.start();
+      btnPlay.style.display = 'none';
+      btnStop.style.display = 'block';
     });
 }); 
   

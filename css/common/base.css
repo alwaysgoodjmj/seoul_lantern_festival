@@ -1,7 +1,34 @@
+* {
+    font-family: 'NotoSansKR_B';
+}
+
 body {
     font-size: 16px;
     color: #000;
-    font-family: 'NotoSansKR_SB';
     background-color: #fff;
     overflow-y: scroll;
 }
+
+.inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+}
+
+/* slider */
+.slide-container { height: 300px; overflow: visible; }
+.slide-btn-wrapper { display: flex; }
+.slide-btn-wrapper > div { position: static; }
+.slide-btn-wrapper .swiper-pagination { width: auto; }
+
+/* main */
+.inner-box, .sub-inner-box { width: 980px; margin: 0 auto; }
