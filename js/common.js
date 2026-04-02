@@ -1,49 +1,58 @@
-
 document.addEventListener('DOMContentLoaded', () => {
-    const dropDownItems = document.querySelectorAll('.js-dropdown');
-    const btnQuick = document.querySelector('.btn-quick');
-    const btnTrigger = document.querySelector('.btn-box');
-    const btnSearch = document.querySelector('.btn-search');
-    const searchModal = document.querySelector('.search-container');
-    const btnClose = document.querySelector('.btn-close');
+    // header
+    const header = document.querySelector('#header');
 
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 0) {
+          header.classList.add('chgBack');
+        } else {
+          header.classList.remove('chgBack');
+        }
+    });
+    
     // gnb
+    const dropDownItems = document.querySelectorAll('.js-dropdown');
+
     dropDownItems.forEach(item => {
         item.addEventListener('mouseenter', () => {
-            dropDownItems.forEach(el => el.classList.remove('ON'));
-            item.classList.add('ON');
+            dropDownItems.forEach(el => el.classList.remove('on'));
+            item.classList.add('on');
         });
         item.addEventListener('mouseleave', () => {
-            item.classList.remove('ON');
+            item.classList.remove('on');
         });
     });
 
-    // quick-menu
-    if (btnQuick && btnTrigger) {
-        btnTrigger.addEventListener('click', (e) => {
-            e.preventDefault();
-            btnQuick.classList.toggle('Active');
-        });
+    //tab
+    const tabBtns = document.querySelectorAll('.btn-tab');
 
-        btnTrigger.addEventListener('keydown', (e) => {
-            if (e.keyCode === 'Enter' || e.keyCode === ' ') {
-                e.preventDefault();
-                btnTrigger.click(); 
+    tabBtns.forEach((btn) => {
+        btn.addEventListener('click', function() {
+            const container = this.closest('[data-tab-container]');
+            const targetId = this.dataset.tab;
+
+            container.querySelectorAll('.btn-tab').forEach(btn => btn.classList.remove('Active'));
+            this.classList.add('Active');
+
+            container.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.toggle('on', content.dataset.tab === targetId);
+            });
+        });
+    });
+
+    // info-container
+    const cardLists = document.querySelectorAll('.info-card > ul'); 
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+                observer.unobserve(entry.target);
             }
         });
-    }
-
-    // 메인 검색 모달
-    if (btnSearch && searchModal && btnClose) {
-        const openSearch = (e) => {
-            e.preventDefault();
-            searchModal.classList.add('ON');
-        };
-        const closeSearch = () => {
-            searchModal.classList.remove('ON');
-        };
-
-        btnSearch.addEventListener('click', openSearch);
-        btnClose.addEventListener('click', closeSearch);
-    }
+    }, { 
+        threshold: 0.1
+    });
+    
+    cardLists.forEach(ul => observer.observe(ul));
 });

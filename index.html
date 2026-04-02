@@ -13,632 +13,431 @@
     <script src="js/swiper.js"></script>
     <script src="js/common.js"></script>
 
-    <title>우리은행 클론</title>
+    <title>2025 서울빛초롱축제 클론</title>
 </head>
 <body>
+  <div id="wrap">
     <!-- header -->
     <header id="header">
-        <div class="header-inner">
-            <h1 class="logo"><a href="#"><span class="hidden">우리은행 로고</span></a></h1>
-
-            <!-- util -->
-            <div class="util">
-              <div class="js-dropdown box-login login" tabindex="0">
-                <span>로그인</span>
-                <div class="select-user">
-                  <a href="#"><span>개인</span></a>
-                  <a href="#"><span>기업</span></a>
-                </div>
-              </div>
-              <div class="js-dropdown box-login certify" tabindex="0">
-                <span>인증센터</span>
-                <div class="select-user">
-                  <a href="#"><span>개인</span></a>
-                  <a href="#"><span>기업</span></a>
-                </div>
-              </div>
-            </div>
-
-            <!-- gnb -->
-            <nav class="gnb main-menu">
-                <ul class="depth1">
-                  <li class="js-dropdown gnb-list">
-                    <a href="#">개인</a>
-                    <ul class="depth2 to-btm">
-                      <li>
-                        <a href="#">개인뱅킹</a>
-                        <ul class="depth3">
-                          <li><a href="#">조회</a></li>
-                          <li><a href="#">이체</a></li>
-                          <li><a href="#">오픈뱅킹</a></li>
-                          <li><a href="#">공과금</a></li>
-                          <li><a href="#">예금/신탁</a></li> 
-                          <li><a href="#">펀드</a></li>
-                          <li><a href="#">보험</a></li>
-                          <li><a href="#">대출</a></li>
-                          <li><a href="#">외환/골드</a></li>
-                          <li><a href="#">퇴직연금</a></li>
-                          <li><a href="#">뱅킹관리</a></li>
-                          <li><a href="#">ISA</a></li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="js-dropdown gnb-list">
-                    <a href="#">기업</a>
-                    <ul class="depth2 to-btm">
-                      <li>
-                        <a href="#">기업뱅킹</a>
-                        <ul class="depth3">
-                          <li><a href="#">조회</a></li>
-                          <li><a href="#">이체</a></li>
-                          <li><a href="#">공과금</a></li>
-                          <li><a href="#">전자결제</a></li> 
-                          <li><a href="#">수표어음</a></li>
-                          <li><a href="#">자금관리</a></li>
-                          <li><a href="#">예금/신탁</a></li>
-                          <li><a href="#">대출</a></li>
-                          <li><a href="#">펀드/보험</a></li>
-                          <li><a href="#">외환</a></li>
-                          <li><a href="#">퇴직연금</a></li>
-                          <li><a href="#">뱅킹관리</a></li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="js-dropdown gnb-list">
-                    <a href="#">자산관리</a>
-                    <ul class="depth2 to-btm">
-                      <li>
-                        <a href="#">개인뱅킹</a>
-                        <ul class="depth3">
-                          <li><a href="#">MY자산 진단</a></li>
-                          <li><a href="#">펀드 포트폴리오</a></li>
-                          <li><a href="#">퇴직연금 포트폴리오</a></li>
-                          <li><a href="#">미래설계</a></li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="js-dropdown gnb-list">
-                    <a href="#">금융상품</a>
-                    <ul class="depth2 to-btm">
-                      <li>
-                        <a href="#">개인뱅킹</a>
-                        <ul class="depth3">
-                          <li><a href="#">추천상품</a></li>
-                          <li><a href="#">예금</a></li>
-                          <li><a href="#">펀드</a></li>
-                          <li><a href="#">대출</a></li>
-                          <li><a href="#">외환</a></li> 
-                          <li><a href="#">골드</a></li>
-                          <li><a href="#">신탁</a></li>
-                          <li><a href="#">보험</a></li>
-                          <li><a href="#">퇴직연금</a></li>
-                          <li><a href="#">ISA</a></li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="js-dropdown gnb-list">
-                    <a href="#">카드</a>
-                    <ul class="depth2 to-btm">
-                      <li>
-                        <a href="#">카드</a>
-                        <ul class="depth3">
-                          <li><a href="#">우리카드</a></li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="js-dropdown gnb-list">
-                    <a href="#">제휴제안</a>
-                  </li>
-                  <li class="js-dropdown gnb-list">
-                    <a href="#">은행소개</a>
-                    <ul class="depth2 to-btm">
-                      <li>
-                        <a href="#none" class="nonlink">은행소개</a>
-                        <ul class="depth3">
-                          <li><a href="#">은행소개</a></li>
-                          <li><a href="#">우리가족광장</a></li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="js-dropdown gnb-list">
-                    <a href="#">전체메뉴</a>
-                  </li>
-                  <li class="js-dropdown gnb-list">
-                    <a href="#">GLOBAL</a>
-                    <ul class="depth2 to-btm">
-                      <li>
-                        <a href="#none" class="nonlink">LANGUAGE</a>
-                        <ul class="depth3">
-                          <li><a href="#">English</a></li>
-                          <li><a href="#">Chinese (中國語)</a></li>
-                          <li><a href="#">Japanese (日本語)</a></li>
-                          <li><a href="#">Filipino (Tagalog)</a></li>
-                          <li><a href="#">Vietnamese (tiếng Việt)</a></li>
-                          <li><a href="#">Mongolian (Монгол хэл)</a></li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </li>
+      <div class="header-inner">
+        <!-- logo -->
+        <h1 class="logo"><a href="#"><span class="hidden">서울빛초롱축제 로고</span></a></h1>
+        <!-- gnb -->
+        <nav class="gnb main-menu">
+            <ul class="main-depth">
+              <li class="js-dropdown">
+                <a href="#">2025 서울빛초롱축제</a>
+                <ul class="depth2">
+                  <li><a href="#">소개</a></li>
+                  <li><a href="#">오시는 길</a></li>
+                  <li><a href="#">축제 둘러보기</a></li>
+                  <li><a href="#">협업 파트너</a></li>
                 </ul>
-            </nav>
-
-            <!-- btn-search -->
-            <button class="btn-search">
-              <img src="images/main/icon_search.png" alt="">
-            </button>
-        </div>
+              </li>
+              <li class="js-dropdown">
+                <a href="#">2025 광화문 마켓</a>
+                <ul class="depth2">
+                  <li><a href="#">소개</a></li>
+                  <li><a href="#">마켓 둘러보기</a></li>
+                  <li><a href="#">참여상인</a></li>
+                  <li><a href="#">협업 파트너</a></li>
+                  <li><a href="#">체험 프로그램&이벤트</a></li>
+                </ul>
+              </li>
+              <li class="js-dropdown">
+                <a href="#">FAQ</a>
+                <ul class="depth2">
+                  <li><a href="#">공지사항</a></li>
+                  <li><a href="#">서울빛초롱축제 FAQ</a></li>
+                  <li><a href="#">광화문 마켓 FAQ</a></li>
+                </ul>
+              </li>
+              <li class="js-dropdown">
+                <a href="#">아카이브</a>
+                <ul class="depth2">
+                  <li><a href="#">BI</a></li>
+                  <li><a href="#">2025 사진</a></li>
+                  <li><a href="#">역대 사진</a></li>
+                  <li><a href="#">수상</a></li>
+                </ul>
+              </li>
+            </ul>
+            <!-- icon-box -->
+            <div class="icon-box">
+              <!-- languages -->
+              <div class="languages">
+                <button class="btn-lan"></button>
+                <ul class="lan_list">
+                  <li class="default">국문</li>
+                  <li>영문</li>
+                </ul>
+              </div>
+              <!-- search-container -->
+              <div class="search-container">
+                <button class="btn-search" aria-label="찾기 버튼"></button>
+                <div class="search-box"></div>
+              </div>
+              <!-- btn-ham -->
+              <a href="#" class="btn-ham" aria-label="단축 메뉴">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line_l"></span>
+              </a>
+            </div>
+        </nav>
+      </div>
     </header>
-
+    
     <!-- main -->
     <main>
-        <!-- slide-container -->
-        <section class="swiper slide-container">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide slide01">
-                  <a href="#">
-                    <img src="images/slide/slide1_bank.jpg" alt="소상공인 금융지원">
-                  </a>
-                </div>
-                <div class="swiper-slide slide02">
-                  <a href="#">
-                    <img src="images/slide/slide2_house.png" alt="버팀목 대출 안내">
-                  </a>
-                </div>
-                <div class="swiper-slide slide03">
-                  <a href="#">
-                    <img src="images/slide/slide3_account.png" alt="비대면 계좌 개설 안심 차단">
-                  </a>
-                </div>
-                <div class="swiper-slide slide04">
-                  <a href="#">
-                    <img src="images/slide/slide4_woori.png" alt="우리 won 뱅킹">
-                  </a>
-                </div>
-            </div>
+      <!-- slide-container -->
+      <section class="swiper slide-container main-slide">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide slide01">
+            <img src="images/main_slide01.png" alt="서울빛초롱축제">
+          </div>
+          <div class="swiper-slide slide02">
+            <img src="images/main_slide02.png" alt="광화문 크리스마스 마켓">
+          </div>
+        </div>
+        <!-- 슬라이드 도트 -->
+        <div class="swiper-pagination"></div>
+      </section>
 
-            <div class="slide-btn-wrapper">
-                <!-- 슬라이드 도트 -->
-                <div class="swiper-pagination"></div>
-                <!-- 슬라이드 play / stop -->
-                <div class="swiper-control">
-                    <button type="button" class="btn-pause"></button>
-                    <button type="button" class="btn-play"></button>
-                </div>
-                <!-- 이전/다음 버튼 -->
-                <div class="swiper-btn-box">
-                  <div class="swiper-button-prev"></div>
-                  <div class="swiper-button-next"></div>
-                </div>
-            </div>
-        </section>
-
-        <section class="inner-box">
-          <!-- quick-menu -->
-          <div class="quick-menu">
-            <ul class="quick-main">
-              <li><a href="#">다른 금융<br>정보 조회</a></li>
-              <li><a href="#">조회</a></li>
-              <li><a href="#">이체</a></li>
-              <li><a href="#">환율</a></li>
-              <li class="btn-quick">
-                <div class="btn-box">
-                  <span>빠른메뉴</span>
-                  <button class="btn-icon" aria-label="빠른 메뉴 전환 버튼"></button>
-                </div>
-                <div class="quick-sub">
-                  <ul>
-                    <li class="bold-txt"><a href="#">스피드계좌조회</a></li>
-                    <li><a href="#">공과금</a></li>
-                    <li><a href="#">뱅킹관리</a></li>
-                    <li><a href="#">고객광장</a></li>
-                    <li><a href="#">영업점안내</a></li>
-                    <li><a href="#">우리카드신청</a></li>
-                  </ul>
-                </div>
+      <!-- 축제 정보 -->
+      <section class="info-container">
+        <div class="content-inner">
+          <div class="tit_box">
+            <h2>2025 서울빛초롱축제 & 광화문 마켓</h2>
+            <h3>SEOUL LANTERN FESTIVAL & GWANGHWAMUN MARKET</h3>
+          </div>
+          <div class="info-card">
+            <ul class="card_lantern">
+              <li>
+                <a href="#">
+                  <span class="tit_info">2025 서울빛초롱축제</span>
+                  <span class="txt_info">&lt;나의 빛, 우리의 꿈, 서울의 마법&gt;<br> 주제로 서울의 겨울밤에 펼쳐지는<br>마법 같은 순간을 선사합니다.</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="tit_info">빛초롱 둘러보기</span>
+                  <span class="txt_info">2025 서울빛초롱축제에서만<br>만날 수 있는 빛 조형물과<br> 프로그램을 소개합니다.</span>
+                </a>
+              </li>
+            </ul>
+            <ul class="card_market">
+              <li>
+                <a href="#">
+                  <span class="tit_info">2025 광화문 마켓</span>
+                  <span class="txt_info">광화문광장이 겨울동화 속<br>산타마을로 변신합니다.<br> 광화문 마켓에서 산타클로스와<br>동화 속 친구들을 만나보세요!</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="tit_info">마켓 둘러보기</span>
+                  <span class="txt_info">2025 광화문 마켓 배치도와<br>구간별 세부내용을 확인하세요!</span>
+                </a>
+              </li>
+            </ul>
+            <ul class="card_common">
+              <li>
+                <span class="tit_info">대중교통 오시는 길</span>
+                <span class="txt_info">
+                  <a href="#">2025 서울빛초롱축제</a>
+                  <a href="#">2025 광화문 마켓</a>
+                </span>
+              </li>
+              <li>
+                <span class="tit_info">아카이브</span>
+                <span class="txt_info">2025 현장 사진과 역대 행사 사진은<br>이곳에서 둘러보세요!</span>
               </li>
             </ul>
           </div>
+        </div>
+      </section>
 
-          <!-- add-menu -->
-          <div class="add-menu">
-            <ul>
-              <li><a href="#">금융 소비자 보호</a></li>
-              <li><a href="#">보안뉴스</a></li>
-              <li><a href="#">상품/약관 공시</a></li>
-            </ul>
-          </div>
+      <!-- 주요 조형물 -->
+      <section class="sculpture-container">
+        <div class="content-inner">
+          <h2>주요 조형물</h2>
+          <div class="tab-container sculpture-tabs" data-tab-container="1">
+            <div class="btn-wrap">
+              <button class="btn-tab Active" data-tab="1">빛초롱 빛 조형물</button>
+              <button class="btn-tab" data-tab="2">마켓 포토스팟</button>
+            </div>
+            
+            <div class="tab-content-container">
+              <div class="tab-content on" data-tab="1">
+                <!-- slide-container -->
+                <div class="swiper slide-container content-slide">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide slide01">
+                      <div class="img-box">
+                        <img src="images/sculpture_01_1.png" alt="">
+                      </div>
+                      <div class="txt-box">
+                        <h2><span class="under-line">시등의 순간</span></h2>
+                        <h3>1887년 3월, 경복궁 건청궁에서 밝혀진 최초의 전등을 LED 영상과 한지 등(燈)을 통해 재현합니다. 옛 사람들이 넋을 놓고 바라본 첫 점등의 마법 같은 순간을 함께 느껴보세요.</h3>
 
-          <!-- bank-product -->
-          <div class="bank-product">
-              <!-- box-product -->
-              <div class="box-product">
-                  <h2>금융상품</h2>
-                  <ul class="product-list">
-                      <li>
-                          <a href="#">
-                              <span class="ico-box">
-                                  <img src="./images/main/product/icon_01.png" alt="예금 아이콘">
-                              </span>
-                              <span>예금</span>
-                          </a>
-                      </li>
-                      <li>
-                          <a href="#">
-                              <span class="ico-box">
-                                  <img src="./images/main/product/icon_02.png" alt="대출 아이콘">
-                              </span>
-                              <span>대출</span>
-                          </a>
-                      </li>
-                      <li>
-                          <a href="#">
-                              <span class="ico-box">
-                                  <img src="./images/main/product/icon_03.png" alt="펀드 아이콘">
-                              </span>
-                              <span>펀드</span>
-                          </a>
-                      </li>
-                      <li>
-                          <a href="#">
-                              <span class="ico-box">
-                                  <img src="./images/main/product/icon_04.png" alt="외환 아이콘">
-                              </span>
-                              <span>외환</span>
-                          </a>
-                      </li>
-                      <li>
-                          <a href="#">
-                              <span class="ico-box">
-                                  <img src="./images/main/product/icon_05.png" alt="신탁 아이콘">
-                              </span>
-                              <span>신탁</span>
-                          </a>
-                      </li>
-                      <li>
-                          <a href="#">
-                              <span class="ico-box">
-                                  <img src="./images/main/product/icon_06.png" alt="신탁 아이콘">
-                              </span>
-                              <span>퇴직연금</span>
-                          </a>
-                      </li>
-                      <li>
-                          <a href="#">
-                              <span class="ico-box">
-                                  <img src="./images/main/product/icon_07.png" alt="신탁 아이콘">
-                              </span>
-                              <span>보험</span>
-                          </a>
-                      </li>
-                      <li>
-                          <a href="#">
-                              <span class="ico-box">
-                                  <img src="./images/main/product/icon_08.png" alt="신탁 아이콘">
-                              </span>
-                              <span>ISA</span>
-                          </a>
-                      </li>
-                  </ul>
+                        <p>청계광장~광통교</p>
+                      </div>
+                    </div>
+                    <div class="swiper-slide slide02">
+                      <div class="img-box">
+                        <img src="images/sculpture_01_2.png" alt="">
+                      </div>
+                      <div class="txt-box">
+                        <h2><span class="under-line">갓</span></h2>
+                        <h3>힙한 트렌드로 재조명된 조선시대 선비의 '갓'을 모티브로 한 조명 연출로, 전통과 현대가 어우러진 글로벌 한국 문화를 선보입니다.</h3>
+
+                        <p>광통교~광교</p>
+                      </div>
+                    </div>
+                    <div class="swiper-slide slide03">
+                      <div class="img-box">
+                        <img src="images/sculpture_01_3.png" alt="">
+                      </div>
+                      <div class="txt-box">
+                        <h2><span class="under-line">청계의 빛 : 청계천의 과거</span></h2>
+                        <h3>청계천 복원 20주년을 기념하여 제작된 서울빛초롱축제 특별전 작품입니다. 서울의 근현대사와 함께 '판자촌'과 '수표석'으로 서민들의 삶을 따뜻하게 재조명합니다. 50~60년대 청계천의 활기찬 공동체와 희망을 간직했던 사람들의 이야기를 담아 소중한 삶의 흔적을 가까이에서 느낄 수 있습니다. 과거에는 청계천의 수위를 측정하기 위해 수표석을 세워 강수량을 측정하였습니다.</h3>
+
+                        <p>광교~장통교</p>
+                      </div>
+                    </div>
+                    <div class="swiper-slide slide04">
+                      <div class="img-box">
+                        <img src="images/sculpture_01_4.png" alt="">
+                      </div>
+                      <div class="txt-box">
+                        <h2><span class="under-line">빛의 오로라</span></h2>
+                        <h3>삼일교 하단을 프로젝션과 레이저로 연출하여 청계천에서 오로라를 보고 즐길 수 있습니다. </h3>
+
+                        <p>장통교~삼일교</p>
+                      </div>
+                    </div>
+                    <div class="swiper-slide slide05">
+                      <div class="img-box">
+                        <img src="images/sculpture_01_5.png" alt="">
+                      </div>
+                      <div class="txt-box">
+                        <h2><span class="under-line">어가행렬</span></h2>
+                        <h3>2024년 서울빛초롱축제에서 다시 보고 싶은 조형물 1위! 종묘대제의 큰 의례인 임금행차, 조선시대의 어가행렬을 모티브로 연출하여 역사 속 서울(한양)에서 전통과 현대가 어우러진 빛의 연희를 함께 즐길 수 있습니다.</h3>
+
+                        <p>우이교~쌍한교</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- 슬라이드 next/prev -->
+                  <div class="swiper-btn-box">
+                    <div class="swiper-button-prev">
+                      <img src="images/btn_slide_prev.png" alt="">
+                    </div>
+                    <div class="swiper-button-next">
+                      <img src="images/btn_slide_next.png" alt="">
+                    </div>
+                  </div>
+                </div>
               </div>
-              <!-- box-card -->
-              <div class="box-card">
-                  <h2>카드</h2>
-                  <ul class="card-list">
-                      <li>
-                          <a href="#">
-                              <span class="ico-box">
-                                  <img src="./images/main/product/icon_09.png" alt="카드신청 아이콘">
-                              </span>
-                              <span>카드신청</span>
-                          </a>
-                      </li>
-                      <li>
-                          <a href="#">
-                              <span class="ico-box">
-                                  <img src="./images/main/product/icon_10.png" alt="나의카드 아이콘">
-                              </span>
-                              <span>나의카드</span>
-                          </a>
-                      </li>
-                      <li>
-                          <a href="#">
-                              <span class="ico-box">
-                                  <img src="./images/main/product/icon_11.png" alt="이벤트 아이콘">
-                              </span>
-                              <span>이벤트</span>
-                          </a>
-                      </li>
-                  </ul>
-              </div>
-          </div>
-          
-          <!-- bank-service -->
-          <div class="bank-service">
-            <h2>서비스</h2>
+              <div class="tab-content" data-tab="2">
+                <!-- slide-container -->
+                <div class="swiper slide-container content-slide">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide slide01">
+                      <div class="img-box">
+                        <img src="images/sculpture_01_1.png" alt="">
+                      </div>
+                      <div class="txt-box">
+                        <h2><span class="under-line">시등의 순간</span></h2>
+                        <h3>1887년 3월, 경복궁 건청궁에서 밝혀진 최초의 전등을 LED 영상과 한지 등(燈)을 통해 재현합니다. 옛 사람들이 넋을 놓고 바라본 첫 점등의 마법 같은 순간을 함께 느껴보세요.</h3>
 
-            <div class="cont-wrap">
-              <a href="#" class="service-box">
-                <div class="img-box">
-                  <!-- <img src="" alt="우리WON뱅킹 바로가기 이미지"> -->
+                        <p>청계광장~광통교</p>
+                      </div>
+                    </div>
+                    <div class="swiper-slide slide02">
+                      <div class="img-box">
+                        <img src="images/sculpture_01_1.png" alt="">
+                      </div>
+                      <div class="txt-box">
+                        <h2><span class="under-line">시등의 순간</span></h2>
+                        <h3>1887년 3월, 경복궁 건청궁에서 밝혀진 최초의 전등을 LED 영상과 한지 등(燈)을 통해 재현합니다. 옛 사람들이 넋을 놓고 바라본 첫 점등의 마법 같은 순간을 함께 느껴보세요.</h3>
+
+                        <p>청계광장~광통교</p>
+                      </div>
+                    </div>
+                    <div class="swiper-slide slide03">
+                      <div class="img-box">
+                        <img src="images/sculpture_01_1.png" alt="">
+                      </div>
+                      <div class="txt-box">
+                        <h2><span class="under-line">시등의 순간</span></h2>
+                        <h3>1887년 3월, 경복궁 건청궁에서 밝혀진 최초의 전등을 LED 영상과 한지 등(燈)을 통해 재현합니다. 옛 사람들이 넋을 놓고 바라본 첫 점등의 마법 같은 순간을 함께 느껴보세요.</h3>
+
+                        <p>청계광장~광통교</p>
+                      </div>
+                    </div>
+                    <div class="swiper-slide slide04">
+                      <div class="img-box">
+                        <img src="images/sculpture_01_1.png" alt="">
+                      </div>
+                      <div class="txt-box">
+                        <h2><span class="under-line">시등의 순간</span></h2>
+                        <h3>1887년 3월, 경복궁 건청궁에서 밝혀진 최초의 전등을 LED 영상과 한지 등(燈)을 통해 재현합니다. 옛 사람들이 넋을 놓고 바라본 첫 점등의 마법 같은 순간을 함께 느껴보세요.</h3>
+
+                        <p>청계광장~광통교</p>
+                      </div>
+                    </div>
+                    <div class="swiper-slide slide05">
+                      <div class="img-box">
+                        <img src="images/sculpture_01_1.png" alt="">
+                      </div>
+                      <div class="txt-box">
+                        <h2><span class="under-line">시등의 순간</span></h2>
+                        <h3>1887년 3월, 경복궁 건청궁에서 밝혀진 최초의 전등을 LED 영상과 한지 등(燈)을 통해 재현합니다. 옛 사람들이 넋을 놓고 바라본 첫 점등의 마법 같은 순간을 함께 느껴보세요.</h3>
+
+                        <p>청계광장~광통교</p>
+                      </div>
+                    </div>
+                    <div class="swiper-slide slide06">
+                      <div class="img-box">
+                        <img src="images/sculpture_01_1.png" alt="">
+                      </div>
+                      <div class="txt-box">
+                        <h2><span class="under-line">시등의 순간</span></h2>
+                        <h3>1887년 3월, 경복궁 건청궁에서 밝혀진 최초의 전등을 LED 영상과 한지 등(燈)을 통해 재현합니다. 옛 사람들이 넋을 놓고 바라본 첫 점등의 마법 같은 순간을 함께 느껴보세요.</h3>
+
+                        <p>청계광장~광통교</p>
+                      </div>
+                    </div>
+                    <div class="swiper-slide slide07">
+                      <div class="img-box">
+                        <img src="images/sculpture_01_1.png" alt="">
+                      </div>
+                      <div class="txt-box">
+                        <h2><span class="under-line">시등의 순간</span></h2>
+                        <h3>1887년 3월, 경복궁 건청궁에서 밝혀진 최초의 전등을 LED 영상과 한지 등(燈)을 통해 재현합니다. 옛 사람들이 넋을 놓고 바라본 첫 점등의 마법 같은 순간을 함께 느껴보세요.</h3>
+
+                        <p>청계광장~광통교</p>
+                      </div>
+                    </div>
+                    <div class="swiper-slide slide08">
+                      <div class="img-box">
+                        <img src="images/sculpture_01_1.png" alt="">
+                      </div>
+                      <div class="txt-box">
+                        <h2><span class="under-line">시등의 순간</span></h2>
+                        <h3>1887년 3월, 경복궁 건청궁에서 밝혀진 최초의 전등을 LED 영상과 한지 등(燈)을 통해 재현합니다. 옛 사람들이 넋을 놓고 바라본 첫 점등의 마법 같은 순간을 함께 느껴보세요.</h3>
+
+                        <p>청계광장~광통교</p>
+                      </div>
+                    </div>
+                    <div class="swiper-slide slide09">
+                      <div class="img-box">
+                        <img src="images/sculpture_01_1.png" alt="">
+                      </div>
+                      <div class="txt-box">
+                        <h2><span class="under-line">시등의 순간</span></h2>
+                        <h3>1887년 3월, 경복궁 건청궁에서 밝혀진 최초의 전등을 LED 영상과 한지 등(燈)을 통해 재현합니다. 옛 사람들이 넋을 놓고 바라본 첫 점등의 마법 같은 순간을 함께 느껴보세요.</h3>
+
+                        <p>청계광장~광통교</p>
+                      </div>
+                    </div>
+                    <div class="swiper-slide slide10">
+                      <div class="img-box">
+                        <img src="images/sculpture_01_1.png" alt="">
+                      </div>
+                      <div class="txt-box">
+                        <h2><span class="under-line">시등의 순간</span></h2>
+                        <h3>1887년 3월, 경복궁 건청궁에서 밝혀진 최초의 전등을 LED 영상과 한지 등(燈)을 통해 재현합니다. 옛 사람들이 넋을 놓고 바라본 첫 점등의 마법 같은 순간을 함께 느껴보세요.</h3>
+
+                        <p>청계광장~광통교</p>
+                      </div>
+                    </div>
+                    <div class="swiper-slide slide11">
+                      <div class="img-box">
+                        <img src="images/sculpture_01_1.png" alt="">
+                      </div>
+                      <div class="txt-box">
+                        <h2><span class="under-line">시등의 순간</span></h2>
+                        <h3>1887년 3월, 경복궁 건청궁에서 밝혀진 최초의 전등을 LED 영상과 한지 등(燈)을 통해 재현합니다. 옛 사람들이 넋을 놓고 바라본 첫 점등의 마법 같은 순간을 함께 느껴보세요.</h3>
+
+                        <p>청계광장~광통교</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- 슬라이드 next/prev -->
+                  <div class="swiper-btn-box">
+                    <div class="swiper-button-prev">
+                      <img src="images/btn_slide_prev.png" alt="">
+                    </div>
+                    <div class="swiper-button-next">
+                      <img src="images/btn_slide_next.png" alt="">
+                    </div>
+                  </div>
                 </div>
-                <div class="desc-box">
-                  <p class="service-tit">우리WON뱅킹</p>
-                  <p class="service-txt">금융과 내가 만나 우리가 되다<br>우리은행 대표 모바일 뱅킹</p>
-                </div>
-              </a>
-              <a href="#" class="service-box">
-                <div class="img-box">
-                  <!-- <img src="" alt="우리WON기업 바로가기 이미지"> -->
-                </div>
-                <div class="desc-box">
-                  <p class="service-tit">우리WON기업</p>
-                  <p class="service-txt">개인/법인사업자 특화 서비스로 채운<br>기업 전용 모바일 뱅킹</p>
-                </div>
-              </a>
-              <a href="#" class="service-box">
-                <div class="img-box">
-                  <!-- <img src="" alt="우리WON모바일 바로가기 이미지"> -->
-                </div>
-                <div class="desc-box">
-                  <p class="service-tit">우리WON모바일</p>
-                  <p class="service-txt">금융과 통신을 한 번에<br>우리은행이 만든 알뜰한 통신</p>
-                </div>
-              </a>
+              </div>
+            </div>
+            
+            <!-- santa-img -->
+            <img src="images/santa_char.png" alt="산타 이미지" class="santa">
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="faq-container">
+        <div class="content-inner">
+          <h2>자주하는 질문</h2>
+          <div class="tab-container faq-tabs" data-tab-container="2">
+            <div class="btn-wrap">
+              <button class="btn-tab Active" data-tab="1">2025 서울빛초롱축제</button>
+              <button class="btn-tab" data-tab="2">2025 광화문 마켓</button>
+            </div>
+
+            <div class="tab-content-container">
+              <div class="tab-content" data-tab="1">
+              </div>
+              <div class="tab-content" data-tab="2">
+              </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <!-- board-news -->
-        <section class="board-news">
-          <div class="sub-inner-box">
-            <div class="news">
-              <div class="board-tit">
-                <p>새소식</p>
-                <a href="#">더보기</a>
-              </div>
-              <ul>
-                <li>
-                  <a href="#">[공지] 얼굴인증 서비스 일시 중단 안내</a>
-                  <span>2025.12.19</span>
-                </li>
-                <li>
-                  <a href="#">[공지] 일부 웹 브라우저 업데이트에 따른 ...</a>
-                  <span>2025.12.08</span>
-                </li>
-                <li>
-                  <a href="#">일부 참가기관 디지털금융망업무 일시중단 안내</a>
-                  <span>2026.03.13</span>
-                </li>
-              </ul>
+      <!-- 아카이브 -->
+      <section class="archive-container">
+        <div class="content-inner">
+          <h2>아카이브</h2>
+          <div class="tab-container archive-tabs" data-tab-container="3">
+            <div class="btn-wrap">
+              <button class="btn-tab Active" data-tab="1">2025 서울빛초롱축제</button>
+              <button class="btn-tab" data-tab="2">역대 서울빛초롱축제</button>
+              <button class="btn-tab" data-tab="3">2025 광화문 마켓</button>
+              <button class="btn-tab" data-tab="4">역대 광화문 마켓</button>
             </div>
-            <div class="event">
-              <div class="board-tit">
-                <p>이벤트</p>
-                <a href="#">더보기</a>
+            
+            <div class="tab-content-container">
+              <div class="tab-content" data-tab="1">
               </div>
-              <ul>
-                <li>
-                  <a href="#">우리 아이 통장 만들고 최대 2만원 받으세요!</a>
-                </li>
-                <li>
-                  <a href="#">우리은행 첫 적금 만들고 1만원 받으세요!</a>
-                </li>
-                <li>
-                  <a href="#">청소년 통장 만들고 최대 2만원 받으세요!</a>
-                </li>
-              </ul>
+              <div class="tab-content" data-tab="2">
+              </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
+
+      <!-- 파트너십 -->
+      <section class="partner-container">
+        <div class="content-inner">
+          <h2>Partnership</h2>
+        </div>
+      </section>
     </main>
-
-    <!-- footer -->
-    <footer id="footer">
-      <div class="footer-gnb">
-        <div class="box-add">
-          <div class="link">
-            <ul>
-              <li class="js-dropdown ars" tabindex="0" aria-haspopup="listbox" aria-expanded="false">
-                <span>대표 1588-5000</span>
-                <ul class="depth2 to-top">
-                  <li>
-                    <span class="main_tit">ARS 이용안내</span>
-                    <ul class="depth3">
-                      <li>
-                        <span class="tit">대표 전화</span>
-                        <div class="number">
-                          <p>1588-5000 / 1599-5000 / 1533-5000</p>
-                          <p>82-2-2006-5000(해외)</p>
-                        </div>
-                      </li>
-                      <li>
-                        <span class="tit">고객의 말씀</span>
-                        <div class="number">
-                          <p>080-365-5000</p>
-                        </div>
-                      </li>
-                      <li>
-                        <span class="tit">신규 상담</span>
-                        <div class="number">
-                          <p>
-                            <span>예적금</span>
-                            <span>1599-8100</span>
-                          </p>
-                          <p>
-                            <span>대출</span>
-                            <span>1599-8300</span>
-                          </p>
-                        </div>
-                      </li>
-                      <li>
-                        <span class="tit">어르신 전용</span>
-                        <div class="number">
-                          <p>1599-6599</p>
-                        </div>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-              <li class="js-dropdown etc" tabindex="0" aria-haspopup="listbox" aria-expanded="false">
-                <span>기타서비스</span>
-                <ul class="depth2 to-top">
-                  <li>
-                    <span class="main_tit">기타서비스</span>
-                    <ul class="depth3">
-                      <li>
-                        <a href="#">법원환급금조회</a>
-                      </li>
-                      <li>
-                        <a href="#">미교부국민주조회</a>
-                      </li>
-                      <li>
-                        <a href="#">상조회사예치금조회</a>
-                      </li>
-                      <li>
-                        <a href="#">예금잔액증명서발급조회</a>
-                      </li>
-                      <li>
-                        <a href="#">지급보증서발급조회</a>
-                      </li>
-                      <li>
-                        <a href="#">서울시예치금내역조회</a>
-                      </li>
-                    </ul>
-                  </li>
-                  
-                </ul>
-              </li>
-              <li class="js-dropdown lan" tabindex="0" aria-haspopup="listbox" aria-expanded="false">
-                <span>LANGUAGE</span>
-                <ul class="depth2 to-top">
-                  <li>
-                    <span class="main_tit">LANGUAGE</span>
-                    <ul class="depth3">
-                      <li><a href="#">English</a></li>
-                      <li><a href="#">中國語</a></li>
-                      <li><a href="#">日本語</a></li>
-                      <li><a href="#">Tagalog</a></li>
-                      <li><a href="#">tiếng Việt</a></li>
-                      <li><a href="#">Монгол хэл</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-              <li class="js-dropdown fam" tabindex="0" aria-haspopup="listbox" aria-expanded="false">
-                <span>패밀리사이트</span>
-                <ul class="depth2 to-top">
-                  <li>
-                    <span class="main_tit">패밀리사이트</span>
-                    <ul class="depth3">
-                      <li>
-                        <a href="#">우리금융지주</a>
-                        <a href="#">우리카드</a>
-                        <a href="#">우리금융캐피탈</a>
-                        <a href="#">우리투자증권</a>
-                        <a href="#">우리자산신탁</a>
-                        <a href="#">우리자산운용</a>
-                        <a href="#">우리금융저축은행</a>
-                        <a href="#">동양생명</a>
-                      </li>
-                      <li>
-                        <a href="#">우리신용정보</a>
-                        <a href="#">우리펀드서비스</a>
-                        <a href="#">우리PE</a>
-                        <a href="#">우리FIS</a>
-                        <a href="#">우리금융경영연구소</a>
-                        <a href="#">우리다문화장학재단</a>
-                        <a href="#">우리미소금융재단</a>
-                        <a href="#">ABL생명</a>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-          <div class="sns">
-            <a href="#"><img src="./images/main/icon_facebook.png" alt="페이스북 바로가기"></a>
-            <a href="#"><img src="./images/main/icon_instagram.png" alt="인스타 바로가기"></a>
-            <a href="#"><img src="./images/main/icon_blog.png" alt="블로그 바로가기"></a>
-            <a href="#"><img src="./images/main/icon_youtube.png" alt="유튜브 바로가기"></a>
-            <a href="#"><img src="./images/main/icon_navertv.png" alt="네이버티비 바로가기"></a>
-          </div>
-        </div>
-      </div>
-      <div class="footer-rights">
-        <div class="logo"><a href="#"><img src="./images/main/icon_logo_g.png" alt="우리은행 하단 로고"></a></div>
-        <div class="rights-box">
-          <ul>
-            <li><a href="#">은행소개</a></li>
-            <li><a href="#">영업점안내</a></li>
-            <li><a href="#">고객광장</a></li>
-            <li><a href="#" class="bold-txt">개인정보처리방침</a></li>
-            <li><a href="#" class="bold-txt">신용정보활용체제</a></li>
-            <li><a href="#">개인신용정보관리보호</a></li>
-            <li><a href="#">사고신고</a></li>
-            <li><a href="#">전자민원접수</a></li>
-            <li><a href="#">보호금융상품등록부</a></li>
-            <li><a href="#">상품공시실</a></li>
-            <li><a href="#">보안센터</a></li>
-            <li><a href="#">웹접근성 이용안내</a></li>
-          </ul>
-          <p>COPYRIGHTS WOORI BANK. ALL RIGHTS RESERVED.</p>
-        </div>
-
-        <div class="awards">
-          <ul>
-            <li>
-              <a href="#"><img src="./images/main/icon_wa.png" alt="웹 접근성 우수 아이콘"></a>
-              <div class="info-box">
-                <span>2025 웹 접근성<br>우수사이트</span>
-              </div>
-            </li>
-            <li>
-              <a href="#"><img src="./images/main/icon_awards.png" alt="고객감동경영대상 아이콘"></a>
-              <div class="info-box">
-                <span>2019 고객감동경영대상<br>종합대상 12년 연속 수상</span>
-              </div>
-            </li>
-            <li>
-              <a href="#"><img src="./images/main/icon_banker_awards.png" alt="The Banker Awards 수상 아이콘"></a>
-              <div class="info-box">
-                <span>The Banker Awards 2020<br>우리은행 3관왕 수상</span>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </footer>
-
-    <!-- 모달 컨텐츠 -->
-    <!-- search-container -->
-    <div class="search-container">
-      <div class="search-box">
-        <form>
-          <input type="text" class="box-input">
-          <a href="#" class="btn-submit"></a>
-        </form>
-
-        <div class="search-list">
-          <span>추천검색어</span>
-          <ul>
-            <li><a href="#">인증서</a></li>
-            <li><a href="#">OTP</a></li>
-            <li><a href="#">주거래</a></li>
-            <li><a href="#">이체한도</a></li>
-            <li><a href="#">자동차대출</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <button class="btn-close"></button>
+    <div id="footer">
+    
     </div>
+  </div>
 </body>
 </html>

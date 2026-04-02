@@ -1,34 +1,41 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const swiper = new Swiper('.slide-container', {
+    const mainSwiper = new Swiper('.main-slide', {
       loop: true,
       autoplay: {
-          delay: 5000,
+          delay: 4000,
           disableOnInteraction: false,
       },
       pagination: {
-        el: '.swiper-pagination',
+        el: '.main-slide .swiper-pagination',
         clickable: true,
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      allowTouchMove: false,
+      }
     });
 
-    const btnPlay = document.querySelector('.btn-play');
-    const btnStop = document.querySelector('.btn-pause');
-    
-    btnStop.addEventListener('click', () => {
-      swiper.autoplay.stop();
-      btnStop.style.display = 'none';
-      btnPlay.style.display = 'block';
-    });
+    const contentSlides = document.querySelectorAll('.content-slide');
 
-    btnPlay.addEventListener('click', () => {
-      swiper.autoplay.start();
-      btnPlay.style.display = 'none';
-      btnStop.style.display = 'block';
+    contentSlides.forEach((el) => {
+        const isArchive = el.closest('.archive-container');
+
+        new Swiper(el, {
+            loop: true,
+            
+            slidesPerView: isArchive ? 3 : 1,
+            spaceBetween: isArchive ? 30 : 0,
+            centeredSlides: true,
+            
+            navigation: {
+                nextEl: el.querySelector('.swiper-button-next'),
+                prevEl: el.querySelector('.swiper-button-prev'),
+            },
+
+            // 반응형
+            breakpoints: {
+                1024: {
+                    slidesPerView: isArchive ? 3 : 1,
+                    spaceBetween: isArchive ? 40 : 0
+                }
+            }
+        });
     });
 }); 
   
