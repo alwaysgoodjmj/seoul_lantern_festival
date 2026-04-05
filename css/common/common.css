@@ -39,7 +39,8 @@ button {
 }
 
 /* content-inner */
-.content-inner h2 { 
+.content-inner h2 {
+    margin-bottom: 30px; 
     font-family: 'Preten_EB'; 
     font-size: 4.5em; 
     color: var(--white); 

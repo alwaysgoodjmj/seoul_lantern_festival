@@ -55,4 +55,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     
     cardLists.forEach(ul => observer.observe(ul));
+
+    // btn-move-insta
+    const btnInsta = document.querySelector('.btn-move-insta');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 0) {
+            btnInsta.classList.add('show');
+        } else {
+            btnInsta.classList.remove('show');
+        }
+    });
 });

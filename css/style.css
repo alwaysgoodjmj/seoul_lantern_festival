@@ -85,10 +85,10 @@ main > section:not(.slide-container) { width: 100vw; background-repeat: no-repea
 /* 주요 조형물 */
 .sculpture-container { height: 1040px; background-color: #EDE9DD; background-image: url(../images/mainbg_02.png); background-size: cover; background-position: 0 100%; }
 .sculpture-container .content-inner { padding-top: 0; }
-.sculpture-container h2 { margin-bottom: 30px; color: var(--header-clr); }
+.sculpture-container h2 { color: var(--header-clr); }
 
 .sculpture-container .tab-content-container { display: flex; align-items: center; }
-.sculpture-container .tab-content { display: none; width: 100%; height: 450px; }
+.sculpture-container .tab-content { display: none; width: 100%; height: 470px; }
 .sculpture-container .tab-content.on { display: block; }
 
 /* 주요 조형물 - 슬라이드 */
@@ -101,13 +101,13 @@ main > section:not(.slide-container) { width: 100vw; background-repeat: no-repea
 
 /* txt-box */
 .sculpture-container .tab-content .txt-box { position: relative; width: 650px; height: 100%;  padding: 60px 40px; background-color: var(--white); border-radius: 1.5em; }
-.sculpture-container .tab-content .txt-box h2 { font-size: 2.5em; }
-.sculpture-container .tab-content .txt-box h2 .under-line { display: inline-block; border-bottom: 2px solid var(--header-clr); padding-bottom: 15px; }
+.sculpture-container .tab-content .txt-box h2 { font-size: 34px; line-height: 1.3; }
+.sculpture-container .tab-content .txt-box h2 .under-line { display: inline-block; border-top: 2px solid var(--header-clr); }
 .sculpture-container .tab-content .txt-box > p { margin-top: 20px; font-size: 1.2em; color: var(--txt-clr); }
 .sculpture-container .tab-content .txt-box > p::before { display: inline-block; width: 15px; height: 20px; content: ''; background: url(../images/ico_spot.png) 0 0 / 100% 100% no-repeat; vertical-align: middle; margin-right: 10px; }
 
 /* 산타 이미지 */
-.santa { position: absolute; right: 30px; top: 80px; z-index: 1; }
+.santa { position: absolute; right: 30px; top: 105px; z-index: 1; }
 
 /* 슬라이드 버튼 */
 .swiper-btn-box { position: absolute; bottom: 20px; right: 20px; display: flex; align-items: center; gap: 50px; }
@@ -117,14 +117,33 @@ main > section:not(.slide-container) { width: 100vw; background-repeat: no-repea
 
 /* FAQ */
 .faq-container { height: 1800px; background: #981A16; }
+.faq-container .qna-box { display: flex; justify-content: space-around; gap: 40px; }
 
 /* 아카이브 */
 .archive-container { height: 1500px; background-color: #EDE9DD; background-image: url(../images/mainbg_03.png); background-size: cover; background-position: 0 0; }
 .archive-container .content-inner { padding-top: 250px; }
 .archive-container h2 { color: var(--header-clr); }
 
+/* 인스타 이동 퀵 버튼 */
+.btn-move-insta { opacity: 0; position: fixed; bottom: 5%; right: 30px; width: 75px; height: 75px; background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); border-radius: 50%; z-index: 50; animation: bounce 1.8s infinite; }
+.btn-move-insta.show { opacity: 1; transition: 1s; }
+
 /**** 애니메이션 ****/
 @keyframes scaleDown {
     0% { transform: scale(1.1); }
     100% { transform: scale(1); }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+        animation-timing-function: ease-out;
+    }
+    45% {
+        transform: translateY(-10px) ; 
+        animation-timing-function: ease-in;
+    }
+    90% {
+        transform: translateY(0);
+    }
 }
