@@ -117,21 +117,23 @@ main > section:not(.slide-container) { width: 100vw; background-repeat: no-repea
 
 /* FAQ */
 .faq-container { height: 1800px; background: #981A16; }
-.faq-container .qna-box { display: flex; justify-content: space-around; gap: 40px; text-align: left; }
+.faq-container .qna-box { display: flex; justify-content: space-between; gap: 40px; text-align: left; }
 .faq-container .qna-box > div { font-size: 28px; }
 .faq-container .qna-box > div h3 { margin-bottom: 20px; font-size: 36px; font-family: 'preten_EB'; color: var(--white); }
 
-.faq-container .qna-box .faq-item { width: 100%; padding: 20px 25px; border-radius: 20px; background: var(--main-beige); }
+.faq-container .qna-box .faq-item { width: 100%; padding: 20px 25px 5px; border-radius: 20px; background: var(--main-beige); border: 1px solid transparent; }
+.faq-container .qna-box .faq-item.Active { background: #FDFBF0; padding-bottom: 25px; border-color: rgba(255, 171, 0, 0.5); box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1), 0 0 15px rgba(255, 215, 0, 0.2); }
 .faq-container .qna-box .faq-item:not(:last-of-type) { margin-bottom: 20px; }
 
 /* quest */
-.faq-container .qna-box .faq-item .faq-qust { display: inline-flex; align-items: center; gap: 10px; text-align: left; }
+.faq-container .qna-box .faq-item .faq-qust { display: inline-flex; align-items: center; gap: 20px; text-align: left; }
 .faq-container .qna-box .faq-item .faq-qust.line2 { align-items: flex-start; }
-.faq-container .qna-box .faq-item .faq-qust::before { display: inline-block; content: ''; width: 20px; height: 49px; background: url(../images/ico_lantern.png) 0 0 / 100% 100% no-repeat; }
+.faq-container .qna-box .faq-item .faq-qust::before { display: inline-block; content: ''; width: 40px; height: 59px; background: url(../images/ico_lantern.png) 0 0 / 100% 100% no-repeat; }
+.faq-container .qna-box .faq-item .faq-qust .txt { flex: 1; }
 
 /* answer */
-.faq-container .qna-box .faq-item .faq-ans { max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
-.faq-container .qna-box .faq-item.Active .faq-ans { max-height: 500px; }
+.faq-container .qna-box .faq-item .faq-ans { max-height: 0; overflow: hidden; margin-top: 10px; }
+.faq-container .qna-box .faq-item.Active .faq-ans { max-height: 500px; border-top: 2px solid #9a805f; padding-top: 10px; }
 
 /* 아카이브 */
 .archive-container { height: 1500px; background-color: #EDE9DD; background-image: url(../images/mainbg_03.png); background-size: cover; background-position: 0 0; }
@@ -141,4 +143,5 @@ main > section:not(.slide-container) { width: 100vw; background-repeat: no-repea
 /* 인스타 이동 퀵 버튼 */
 .btn-move-insta { opacity: 0; position: fixed; bottom: 5%; right: 30px; width: 75px; height: 75px; background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); border-radius: 50%; z-index: 50; animation: bounce 1.8s infinite; }
 .btn-move-insta.show { opacity: 1; transition: 1s; }
+.btn-move-insta::after { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 40px; height: 40px; content: ''; background: url(../images/ico_insta.png) 0 0 / 100% 100% no-repeat; }
 

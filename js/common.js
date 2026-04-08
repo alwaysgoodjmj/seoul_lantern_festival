@@ -66,4 +66,30 @@ document.addEventListener('DOMContentLoaded', () => {
             btnInsta.classList.remove('show');
         }
     });
+
+    // qna
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+        item.addEventListener('click', function(e) {
+            const answer = this.querySelector('.faq-ans');
+            const isActive = this.classList.contains('Active');
+            const container = this.closest('.faq-list-wrap');
+
+            container.querySelectorAll('.faq-item').forEach(el => {
+                if (el !== this) {
+                    el.classList.remove('Active');
+                    el.querySelector('.faq-ans').style.maxHeight = null;
+                }
+            });
+
+            if (!isActive) {
+                this.classList.add('Active');
+                answer.style.maxHeight = answer.scrollHeight + "px";
+            } else {
+                this.classList.remove('Active');
+                answer.style.maxHeight = null;
+            }
+        });
+    });
 });
